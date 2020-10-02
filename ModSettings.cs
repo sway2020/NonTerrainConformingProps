@@ -1,4 +1,5 @@
 ﻿// Originally written by algernon for Find It 2.
+using System.Collections.Generic;
 using System.Xml.Serialization;
 
 namespace NonTerrainConformingProps
