@@ -14,16 +14,21 @@ namespace NonTerrainConformingProps
 		{
             if (prop.m_material?.shader != propFenceShader) return;
             if (Settings.skipVanillaProps && !prop.m_isCustomContent) return;
-            // Debug.Log("Generated NTCP version of: " + prop.name);
-            PropInfo propInfo = CloneProp(prop);
+            if (Mod.skippedDictionary.ContainsKey(prop.name) && Mod.skippedDictionary[prop.name]) return;
 
+                PropInfo propInfo = CloneProp(prop);
             ((UnityEngine.Object)propInfo).name = (((UnityEngine.Object)prop).name.Replace("_Data", "") + " NTCP_Data");
 
             if (propInfo.m_material != null)
 			{
 				propInfo.m_material.shader = propDefaultShader;
 			}
+
 			Mod.cloneMap.Add(propInfo, prop);
+            if (!Mod.skippedDictionary.ContainsKey(prop.name))
+            {
+                Settings.skippedEntries.Add(new SkippedEntry(prop.name));
+            }
 		}
 
 		public static PropInfo CloneProp(PropInfo prop)
@@ -91,6 +96,8 @@ namespace NonTerrainConformingProps
                 }
                 */
             }
+
+            XMLUtils.SaveSettings();
         }
 
         public override void OnLevelUnloading()

@@ -12,7 +12,7 @@ namespace NonTerrainConformingProps
     /// </summary>
     internal static class XMLUtils
     {
-        internal static readonly string SettingsFileName = "NonTerrainConformingProps.xml";
+        internal static readonly string SettingsFileName = "NonTerrainConformingPropsConfig.xml";
 
         /// <summary>
         /// Load settings from XML file.

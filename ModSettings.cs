@@ -1,4 +1,5 @@
 ﻿// Originally written by algernon for Find It 2.
+// Modified by sway
 using System.Collections.Generic;
 using System.Xml.Serialization;
 
@@ -11,6 +12,8 @@ namespace NonTerrainConformingProps
     internal static class Settings
     {
         internal static bool skipVanillaProps = false;
+
+        internal static List<SkippedEntry> skippedEntries = new List<SkippedEntry>();
     }
 
     /// <summary>
@@ -21,5 +24,22 @@ namespace NonTerrainConformingProps
     {
         [XmlElement("SkipVanillaProps")]
         public bool SkipVanillaProps { get => Settings.skipVanillaProps; set => Settings.skipVanillaProps = value; }
+
+        [XmlArray("SkippedEntries")]
+        [XmlArrayItem("SkippedEntry")]
+        public List<SkippedEntry> SkippedEntries { get => Settings.skippedEntries; set => Settings.skippedEntries = value; }
+    }
+
+    public class SkippedEntry
+    {
+        [XmlAttribute("Name")]
+        public string name = "";
+
+        [XmlAttribute("Skipped")]
+        public bool skipped = false;
+
+        public SkippedEntry() { }
+
+        public SkippedEntry(string newName) { name = newName; }
     }
 }
