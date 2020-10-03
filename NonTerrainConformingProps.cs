@@ -44,7 +44,6 @@ namespace NonTerrainConformingProps
                 UIHelper group = helper.AddGroup(Name) as UIHelper;
                 UIPanel panel = group.self as UIPanel;
 
-                // Disable debug messages logging
                 UICheckBox checkBox = (UICheckBox)group.AddCheckbox("Skip all terrain-conforming vanilla props", Settings.skipVanillaProps, (b) =>
                 {
                     Settings.skipVanillaProps = b;
