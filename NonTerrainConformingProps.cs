@@ -68,54 +68,53 @@ namespace NonTerrainConformingProps
                 Debug.LogException(e);
             }
         }
+    }
 
-        public static class Patcher
+    public static class Patcher
+    {
+        private const string HarmonyId = "sway.NonTerrainConformingProps";
+
+        private static bool patched = false;
+
+        public static void PatchAll()
         {
-            private const string HarmonyId = "sway.NonTerrainConformingProps";
+            if (patched) return;
 
-            private static bool patched = false;
+            UnityEngine.Debug.Log("Non-Terrain Conforming Props: Patching...");
 
-            public static void PatchAll()
-            {
-                if (patched) return;
+            patched = true;
 
-                UnityEngine.Debug.Log("Non-Terrain Conforming Props: Patching...");
-
-                patched = true;
-
-                // Harmony.DEBUG = true;
-                var harmony = new Harmony("sway.NonTerrainConformingProps");
-                harmony.PatchAll(Assembly.GetExecutingAssembly());
-            }
-
-            public static void UnpatchAll()
-            {
-                if (!patched) return;
-
-                var harmony = new Harmony(HarmonyId);
-                harmony.UnpatchAll(HarmonyId);
-
-                patched = false;
-
-                UnityEngine.Debug.Log("Non-Terrain Conforming Props: Reverted...");
-            }
-
+            // Harmony.DEBUG = true;
+            var harmony = new Harmony("sway.NonTerrainConformingProps");
+            harmony.PatchAll(Assembly.GetExecutingAssembly());
         }
 
-        [HarmonyPatch(typeof(RenderManager), "Managers_CheckReferences")]
-        public static class LoadingHook
+        public static void UnpatchAll()
         {
-            public static void Prefix()
-            {
-                if (!Mod.PrefabsInitialized)
-                {
-                    Mod.PrefabsInitialized = true;
-                    Singleton<LoadingManager>.instance.QueueLoadingAction(Enumerations.CreateClones());
-                    Singleton<LoadingManager>.instance.QueueLoadingAction(Enumerations.InitializeAndBindClones());
-                }
-            }
+            if (!patched) return;
+
+            var harmony = new Harmony(HarmonyId);
+            harmony.UnpatchAll(HarmonyId);
+
+            patched = false;
+
+            UnityEngine.Debug.Log("Non-Terrain Conforming Props: Reverted...");
         }
 
+    }
+
+    [HarmonyPatch(typeof(RenderManager), "Managers_CheckReferences")]
+    public static class LoadingHook
+    {
+        public static void Prefix()
+        {
+            if (!Mod.PrefabsInitialized)
+            {
+                Mod.PrefabsInitialized = true;
+                Singleton<LoadingManager>.instance.QueueLoadingAction(Enumerations.CreateClones());
+                Singleton<LoadingManager>.instance.QueueLoadingAction(Enumerations.InitializeAndBindClones());
+            }
+        }
     }
 
 }
