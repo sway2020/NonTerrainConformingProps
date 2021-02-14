@@ -14,7 +14,7 @@ namespace NonTerrainConformingProps
 {
     public class Mod : IUserMod
     {
-        public string Name => "Non-Terrain Conforming Props";
+        public string Name => "Non-Terrain Conforming Props 1.1.2";
         public string Description => "Generate a \"non-terrain conforming\" version of each terrain-conforming prop";
 
         public static List<PropInfo> tcProps = new List<PropInfo>();
