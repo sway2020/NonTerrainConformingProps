@@ -14,7 +14,7 @@ namespace NonTerrainConformingProps
 {
     public class Mod : IUserMod
     {
-        public string Name => "Non-Terrain Conforming Props 1.1.3";
+        public string Name => "Non-Terrain Conforming Props 1.1.4";
         public string Description => "Generate a \"non-terrain conforming\" version of each terrain-conforming prop";
 
         public static List<PropInfo> tcProps = new List<PropInfo>();
@@ -55,7 +55,7 @@ namespace NonTerrainConformingProps
 
                 // show path to NonTerrainConformingPropsConfig.xml
                 string path = Path.Combine(DataLocation.executableDirectory, "NonTerrainConformingPropsConfig.xml");
-                UITextField customTagsFilePath = (UITextField)group.AddTextfield("Config File", path, _ => { }, _ => { });
+                UITextField customTagsFilePath = (UITextField)group.AddTextfield("Configuration File - NonTerrainConformingPropsConfig.xml", path, _ => { }, _ => { });
                 customTagsFilePath.width = panel.width - 30;
                 group.AddButton("Show in File Explorer", () => UnityEngine.Application.OpenURL(DataLocation.executableDirectory));
             
