@@ -14,13 +14,14 @@ namespace NonTerrainConformingProps
 {
     public class Mod : IUserMod
     {
-        public string Name => "Non-Terrain Conforming Props 1.1.4";
+        public string Name => "Non-Terrain Conforming Props 1.1.5";
         public string Description => "Generate a \"non-terrain conforming\" version of each terrain-conforming prop";
 
         public static List<PropInfo> tcProps = new List<PropInfo>();
         public static Dictionary<PropInfo, PropInfo> cloneMap = new Dictionary<PropInfo, PropInfo>();
         public static bool PrefabsInitialized = false;
         public static Dictionary<string, bool> skippedDictionary = new Dictionary<string, bool>();
+        public static HashSet<PropInfo> generatedNTCPProp = new HashSet<PropInfo>();
 
         public void OnEnabled()
         {
@@ -57,7 +58,7 @@ namespace NonTerrainConformingProps
                 string path = Path.Combine(DataLocation.executableDirectory, "NonTerrainConformingPropsConfig.xml");
                 UITextField customTagsFilePath = (UITextField)group.AddTextfield("Configuration File - NonTerrainConformingPropsConfig.xml", path, _ => { }, _ => { });
                 customTagsFilePath.width = panel.width - 30;
-                group.AddButton("Show in File Explorer", () => UnityEngine.Application.OpenURL(DataLocation.executableDirectory));
+                group.AddButton("Show in File Explorer", () => System.Diagnostics.Process.Start(DataLocation.executableDirectory));
             
             }
             catch (Exception e)

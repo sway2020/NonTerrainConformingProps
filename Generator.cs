@@ -64,6 +64,7 @@ namespace NonTerrainConformingProps
                 key.m_generatedInfo = UnityEngine.Object.Instantiate<PropInfoGen>(key.m_generatedInfo);
                 key.m_generatedInfo.name = key.name;
                 key.m_generatedInfo.m_propInfo = key;
+                Mod.generatedNTCPProp.Add(key);
             }
 
             XMLUtils.SaveSettings();
