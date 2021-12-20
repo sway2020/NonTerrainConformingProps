@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Language UniqueName="ja" ReadableName="日本語">
+  <Translations>
+    <Translation ID="NTCP_DESC" String="地形に追従するPropから、追従しないPropバージョンを生成します"/>
+    <Translation ID="TRN_CHOICE" String="言語設定(次回から有効)"/>
+    <Translation ID="TRN_SYS" String="システム言語を使用"/>
+    <Translation ID="NTCP_SET_VAN" String="バニラ内にある、地形に追従するPropは全てスキップ"/>
+    <Translation ID="NTCP_SET_VANTP" String="生成された地形に追従しないバニラのPropは、次回のセーブファイルをロードすると消えます"/>
+    <Translation ID="NTCP_SET_CONF" String="設定ファイル"/>
+    <Translation ID="NTCP_SET_CONFFE" String="エクスプローラで開く"/>
+
+  </Translations>
+</Language>
