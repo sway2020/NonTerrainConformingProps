@@ -1,0 +1,13 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Language UniqueName="en" ReadableName="English">
+  <Translations>
+    <Translation ID="NTCP_DESC" String="Generate a non-terrain conforming version of each terrain-conforming prop" />
+    <Translation ID="TRN_CHOICE" String="Set language (will be effective next time)" />
+    <Translation ID="TRN_SYS" String="Use system language" />
+    <Translation ID="NTCP_SET_VAN" String="Skip all vanilla terrain-conforming props" />
+    <Translation ID="NTCP_SET_VANTP" String="Generated non-terrain conforming vanilla props will disappear next time when a save file is loaded" />
+    <Translation ID="NTCP_SET_CONF" String="Configuration File" />
+    <Translation ID="NTCP_SET_CONFFE" String="Show in File Explorer" />
+
+  </Translations>
+</Language>

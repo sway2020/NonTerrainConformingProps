@@ -14,8 +14,12 @@ namespace NonTerrainConformingProps
 {
     public class Mod : IUserMod
     {
-        public string Name => "Non-Terrain Conforming Props 1.1.5";
-        public string Description => "Generate a \"non-terrain conforming\" version of each terrain-conforming prop";
+        public const string version = "1.1.6";
+        public string Name => "Non-Terrain Conforming Props " + version;
+        public string Description
+        {
+            get { return Translations.Translate("NTCP_DESC"); }
+        }
 
         public static List<PropInfo> tcProps = new List<PropInfo>();
         public static Dictionary<PropInfo, PropInfo> cloneMap = new Dictionary<PropInfo, PropInfo>();
@@ -46,19 +50,29 @@ namespace NonTerrainConformingProps
                 UIHelper group = helper.AddGroup(Name) as UIHelper;
                 UIPanel panel = group.self as UIPanel;
 
-                UICheckBox checkBox = (UICheckBox)group.AddCheckbox("Skip all terrain-conforming vanilla props", Settings.skipVanillaProps, (b) =>
+                UICheckBox checkBox = (UICheckBox)group.AddCheckbox(Translations.Translate("NTCP_SET_VAN"), Settings.skipVanillaProps, (b) =>
                 {
                     Settings.skipVanillaProps = b;
                     XMLUtils.SaveSettings();
                 });
-                checkBox.tooltip = "Generated \"non-terrain conforming\" vanilla props will disappear next time when a save file is loaded";
+                checkBox.tooltip = Translations.Translate("NTCP_SET_VANTP");
+                group.AddSpace(10);
+
+                // languate settings
+                UIDropDown languageDropDown = (UIDropDown)group.AddDropdown(Translations.Translate("TRN_CHOICE"), Translations.LanguageList, Translations.Index, (value) =>
+                {
+                    Translations.Index = value;
+                    XMLUtils.SaveSettings();
+                });
+
+                languageDropDown.width = 300;
                 group.AddSpace(10);
 
                 // show path to NonTerrainConformingPropsConfig.xml
                 string path = Path.Combine(DataLocation.executableDirectory, "NonTerrainConformingPropsConfig.xml");
-                UITextField customTagsFilePath = (UITextField)group.AddTextfield("Configuration File - NonTerrainConformingPropsConfig.xml", path, _ => { }, _ => { });
+                UITextField customTagsFilePath = (UITextField)group.AddTextfield(Translations.Translate("NTCP_SET_CONF") + " - NonTerrainConformingPropsConfig.xml", path, _ => { }, _ => { });
                 customTagsFilePath.width = panel.width - 30;
-                group.AddButton("Show in File Explorer", () => System.Diagnostics.Process.Start(DataLocation.executableDirectory));
+                group.AddButton(Translations.Translate("NTCP_SET_CONFFE"), () => System.Diagnostics.Process.Start(DataLocation.executableDirectory));
             
             }
             catch (Exception e)
