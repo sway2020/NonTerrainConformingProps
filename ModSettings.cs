@@ -25,6 +25,19 @@ namespace NonTerrainConformingProps
         [XmlElement("SkipVanillaProps")]
         public bool SkipVanillaProps { get => Settings.skipVanillaProps; set => Settings.skipVanillaProps = value; }
 
+        [XmlElement("Language")]
+        public string Language
+        {
+            get
+            {
+                return Translations.Language;
+            }
+            set
+            {
+                Translations.Language = value;
+            }
+        }
+
         [XmlArray("SkippedEntries")]
         [XmlArrayItem("SkippedEntry")]
         public List<SkippedEntry> SkippedEntries { get => Settings.skippedEntries; set => Settings.skippedEntries = value; }

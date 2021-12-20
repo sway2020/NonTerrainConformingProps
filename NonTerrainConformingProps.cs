@@ -14,7 +14,7 @@ namespace NonTerrainConformingProps
 {
     public class Mod : IUserMod
     {
-        public const string version = "1.1.6";
+        public const string version = "1.1.7";
         public string Name => "Non-Terrain Conforming Props " + version;
         public string Description
         {
