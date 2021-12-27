@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Language UniqueName="ru" ReadableName="Русский">
+  <Translations>
+    <Translation ID="NTCP_DESC" String="Создание для каждого объекта с соответствием рельефу местности версию без соответствия рельефу местности"/>
+    <Translation ID="TRN_CHOICE" String="Выбор языка (применится при следующей загрузке)"/>
+    <Translation ID="TRN_SYS" String="Использ. системный"/>
+    <Translation ID="NTCP_SET_VAN" String="Не загружать все ванильные объекты с соответствием рельефу местности"/>
+    <Translation ID="NTCP_SET_VANTP" String="Созданные модом, из ванильных, объекты без соответствия рельефу местности исчезнут при следующей загрузке"/>
+    <Translation ID="NTCP_SET_CONF" String="Файл конфигурации"/>
+    <Translation ID="NTCP_SET_CONFFE" String="Показать в Проводнике"/>
+
+  </Translations>
+</Language>

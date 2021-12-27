@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Language UniqueName="zh-tw" ReadableName="繁體中文">
+  <Translations>
+    <Translation ID="NTCP_DESC" String="為每個依地勢變形的道具生成不依地勢變形的版本"/>
+    <Translation ID="TRN_CHOICE" String="語言設置 (下次生效)"/>
+    <Translation ID="TRN_SYS" String="使用系統默認語言"/>
+    <Translation ID="NTCP_SET_VAN" String="跳過所有非玩家自製的依地勢變形道具"/>
+    <Translation ID="NTCP_SET_VANTP" String="已放置的不依地勢變形版本道具將在下次讀檔時消失"/>
+    <Translation ID="NTCP_SET_CONF" String="配置文件"/>
+    <Translation ID="NTCP_SET_CONFFE" String="在檔案總管中顯示"/>
+
+  </Translations>
+</Language>

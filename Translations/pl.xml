@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Language UniqueName="pl" ReadableName="Polish">
+  <Translations>
+    <Translation ID="NTCP_DESC" String="Wygeneruj bez terenu wersje każdego obiektu zgodnego z terenem"/>
+    <Translation ID="TRN_CHOICE" String="Ustaw język (będzie efektywniejszy po restarcie)"/>
+    <Translation ID="TRN_SYS" String="Użyj języka systemowego"/>
+    <Translation ID="NTCP_SET_VAN" String="Pomiń wszystkie podstawowe obiekty zgodne z warunkami terenowymi"/>
+    <Translation ID="NTCP_SET_VANTP" String="Wygenerowany bez terenu zgodny z standardową dekoracją zniknie następnym razem, gdy zapisany plik zostanie załadowany"/>
+    <Translation ID="NTCP_SET_CONF" String="Plik konfiguracyjny"/>
+    <Translation ID="NTCP_SET_CONFFE" String="Pokaż w Eksploratorze plików"/>
+
+  </Translations>
+</Language>
