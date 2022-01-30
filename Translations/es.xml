@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Language UniqueName="es" ReadableName="Español">
+  <Translations>
+    <Translation ID="NTCP_DESC" String="Generar una versión que no siga el terreno de cada decoración que siga el terreno"/>
+    <Translation ID="TRN_CHOICE" String="Establecer idioma (se activara en la próxima carga)"/>
+    <Translation ID="TRN_SYS" String="Utilizar idioma del juego"/>
+    <Translation ID="NTCP_SET_VAN" String="Omitir todos las decoraciones base que sigan el terreno"/>
+    <Translation ID="NTCP_SET_VANTP" String="Las decoraciones base generadas que no sigan el terreno desaparecerán la próxima vez que una partida sea cargada"/>
+    <Translation ID="NTCP_SET_CONF" String="Archivo de Configuración"/>
+    <Translation ID="NTCP_SET_CONFFE" String="Mostrar en el Explorador de Archivos"/>
+
+  </Translations>
+</Language>
