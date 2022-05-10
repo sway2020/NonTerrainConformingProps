@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Language UniqueName="tr" ReadableName="Türkçe">
+  <Translations>
+    <Translation ID="NTCP_DESC" String="Her araziye uygun desteğin araziye uygun olmayan bir versiyonunu oluşturun"/>
+    <Translation ID="TRN_CHOICE" String="Dili ayarla (bir dahaki sefere etkili olacak)"/>
+    <Translation ID="TRN_SYS" String="Sistem dilini kullan"/>
+    <Translation ID="NTCP_SET_VAN" String="Vanilla arazisine uygun tüm aksesuarları atla"/>
+    <Translation ID="NTCP_SET_VANTP" String="Oluşturulan araziye uygun olmayan vanilla destekleri, bir dahaki sefere bir kaydetme dosyası yüklendiğinde kaybolacaktır"/>
+    <Translation ID="NTCP_SET_CONF" String="Yapılandırma Dosyası"/>
+    <Translation ID="NTCP_SET_CONFFE" String="Dosya Gezgini'nde Göster"/>
+
+  </Translations>
+</Language>

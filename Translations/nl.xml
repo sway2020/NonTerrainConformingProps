@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Language UniqueName="nl" ReadableName="Nederlands">
+  <Translations>
+    <Translation ID="NTCP_DESC" String="Genereer een niet-terreinconforme versie van elke terreinconforme prop"/>
+    <Translation ID="TRN_CHOICE" String="Taal instellen (zal de volgende keer van kracht zijn)"/>
+    <Translation ID="TRN_SYS" String="Gebruik systeemtaal"/>
+    <Translation ID="NTCP_SET_VAN" String="Sla alle vanilla terreinconforme props over"/>
+    <Translation ID="NTCP_SET_VANTP" String="Gegenereerde niet-terreinconforme vanilla props zullen de volgende keer verdwijnen als een opslagbestand wordt geladen"/>
+    <Translation ID="NTCP_SET_CONF" String="Configuratiebestand"/>
+    <Translation ID="NTCP_SET_CONFFE" String="Toon bestand in verkenner"/>
+
+  </Translations>
+</Language>
